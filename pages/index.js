@@ -1,7 +1,7 @@
 import React, { createContext } from 'react'
 import Wave from 'react-wavify'
 import Navbar from '../components/Navbar'
-import ProjectsCarousel from '../components/ProjectsCarousel'
+import ProjectsCarousel from '../components/ProjectsCarousel/ProjectsCarousel'
 import Title from '../components/Title'
 
 export default function index({data}) {
@@ -18,19 +18,20 @@ export default function index({data}) {
           className='rotate-180'
           paused={false}
           options={{
-            height: 40,
-            amplitude: 40,
-            speed: 0.25,
+            height: 20,
+            amplitude: 80,
+            speed: 0.2,
             points: 2
           }} />
         <div className='flex flex-col justify-center'>
-          <div className='self-center w-96 flex flex-col'>
+          <div className='my-5 self-center w-96 flex flex-col'>
             <Title text="About me" />
-            <div className=''>
+            <div>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
             </div>
           </div>
-          <div className='self-center'>
+          <div className='my-5 flex flex-col self-center'>
+            <Title text="Projects" />
             <ProjectsCarousel projects={data} />
           </div>
         </div>
