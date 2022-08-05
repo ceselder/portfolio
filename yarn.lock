@@ -510,6 +510,11 @@
     "defined" "^1.0.0"
     "minimist" "^1.2.6"
 
+"devicon-react-svg@^0.2.3":
+  "integrity" "sha512-sy81d4yTglUNextq3Q4sUI1LB+gUrgfRzyNG3H3Skg36TQZ/WFlWwXFhgJ+53kZ9vU0kg33tgjHKhI8LX3DDZw=="
+  "resolved" "https://registry.npmjs.org/devicon-react-svg/-/devicon-react-svg-0.2.3.tgz"
+  "version" "0.2.3"
+
 "didyoumean@^1.2.2":
   "integrity" "sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw=="
   "resolved" "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz"
