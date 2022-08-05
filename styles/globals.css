@@ -13,3 +13,8 @@
 {
     font-family: 'Simvoni';
 }
+
+.flip-horizontal
+{
+    transform: scale(-1,1)
+}
