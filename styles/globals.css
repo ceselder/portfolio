@@ -9,9 +9,20 @@
     font-display: swap;
 }
 
-.text-simvoni
+@font-face {
+    font-family: 'Simvoni-Bold';
+    src: url('/fonts/Simvoni-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+.simvoni
 {
     font-family: 'Simvoni';
+}
+
+.simvoni-bold
+{
+    font-family: 'Simvoni-Bold';
 }
 
 .flip-horizontal
