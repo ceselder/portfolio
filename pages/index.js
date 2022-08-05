@@ -54,7 +54,7 @@ export default function index({ data }) {
 
 
           <div className='self-center flex flex-col'>
-            <Title text="Experience 🤝" />
+            <Title text="Skills 🔧" />
             <div className='mt-10 flex flex-row justify-between min-w-[50rem] ml-32'>
               <div className='self-center max-w-sm' ref={aboutMeRef}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
