@@ -21,7 +21,7 @@ export default function index({ data }) {
             Celeste
           </h1>
         </div>
-        <Wave fill='#570861'
+        <Wave fill='#501b55ff'
           className='rotate-180 fill-slate-200'
           paused={false}
           options={{
@@ -34,7 +34,7 @@ export default function index({ data }) {
           <div className='self-center flex flex-col'>
             <Title text="About me 👋" />
             <div className='flex flex-row justify-between min-w-[55rem]'>
-              <img className='w-96 scale-150' src="img/Illustration.svg" />
+              <img className='h-96' src="img/about_me.svg" />
               <div className='self-center text-lg max-w-md' ref={aboutMeRef}>
                 Welcome! My name is Celeste.
                 I'm a computer science student at Ghent University.
@@ -54,18 +54,18 @@ export default function index({ data }) {
 
 
           <div className='self-center flex flex-col'>
-            <Title text="Skills 🔧" />
+            <Title text={`Skills 🔧`} />
             <div className='mt-10 flex flex-row justify-between min-w-[50rem] ml-32'>
               <div className='self-center max-w-sm' ref={aboutMeRef}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
               </div>
-              <img className='w-[24rem] -scale-x-[130%] scale-y-[130%]' src="img/experience_2.svg" />
+              <img className='h-96' src="img/experience_celeste.svg" />
             </div>
           </div>
           <div className='self-center flex flex-col'>
             <Title text="Contact ✉️" />
             <div className='mt-10 flex flex-row justify-between min-w-[50rem] mr-32'>
-              <img className='w-[24rem] -scale-x-[130%] scale-y-[130%]' src="img/contact_2.svg" />
+              <img className='h-96' src="img/contact_2.svg" />
               <div className='self-center max-w-sm' ref={aboutMeRef}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
                 <div className='flex flex-row gap-x-4 my-2'>
