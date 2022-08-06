@@ -7,8 +7,9 @@ import Title from '../components/Title'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { Motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import ContactIcon from '../components/ContactIcon'
+import TextLoop from '../components/TextLoop'
 
 export default function index({ data }) {
 
@@ -20,12 +21,13 @@ export default function index({ data }) {
       <div className='min-h-[100vh] h-full simvoni bg-extend-bg text-black pb-20'>
         <div className=' text-white bg-extend-purple flex flex-col'>
           <Navbar scrollToAboutMe={scrollToAboutMe} />
-          <h1 className='pt-10 font-bold text-7xl self-center'>
+          <h1 className='pt-10 pb-2 font-bold text-7xl self-center'>
             Celeste
           </h1>
-          <h1 className='py-4 font-bold text-4xl text-gray-300 self-center'>
-            Web Developer
-          </h1>
+          <TextLoop className='flex pb-20 text-5xl justify-center text-white opacity-80 ' 
+                      interval={1000} 
+                      contents={['Developer', 'Student', 'Arch User', 'Vegan']} />
+
         </div>
         <Wave fill='#501b55ff'
           className='rotate-180 fill-slate-200 '
@@ -71,13 +73,13 @@ export default function index({ data }) {
           <div className='self-center flex flex-col'>
             <Title text="Contact ✉️" />
             <div className='flex flex-row justify-center min-w-[50rem]'>
-              <div className='self-center text-center text-xl max-w-md' ref={aboutMeRef}>
-                Want to discuss a project, a job opportunity or whatever? 
+              <div className='self-center text-center text-xl ' ref={aboutMeRef}>
+                Want to discuss a project, job opportunity or something else?
                 <br />You can contact me here.
                 <div className='justify-center flex flex-row gap-x-4 my-2'>
-                  <ContactIcon color='[#5865F2]' text='celeste#4332' icon={faDiscord} />  
-                  <ContactIcon color='black' onClick={() => window.open('https://github.com/ceselder')} text='ceselder' icon={faGithub} />  
-                  <ContactIcon color='extend-purple' onClick={() => window.open('mailto:cooletrogen@protonmail.com')} text='coolestrogen@protonmail.com' icon={faEnvelope} />           
+                  <ContactIcon color='[#5865F2]' text='celeste#4332' icon={faDiscord} />
+                  <ContactIcon color='black' onClick={() => window.open('https://github.com/ceselder')} text='ceselder' icon={faGithub} />
+                  <ContactIcon color='extend-purple' onClick={() => window.open('mailto:cooletrogen@protonmail.com')} text='coolestrogen@protonmail.com' icon={faEnvelope} />
                 </div>
               </div>
 
