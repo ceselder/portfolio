@@ -10,6 +10,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
 import ContactIcon from '../components/ContactIcon'
 import TextLoop from '../components/TextLoop'
+import Bold from '../components/Bold'
 
 export default function index({ data }) {
 
@@ -21,10 +22,10 @@ export default function index({ data }) {
       <div className='min-h-[100vh] h-full simvoni bg-extend-bg text-black pb-20'>
         <div className=' text-white bg-extend-purple flex flex-col'>
           <Navbar scrollToAboutMe={scrollToAboutMe} />
-          <h1 className='pt-10 pb-2 font-bold text-7xl self-center'>
+          <h1 className='pt-10 pb-2 font-bold text-8xl self-center'>
             Celeste
           </h1>
-          <TextLoop className='flex pb-20 text-5xl justify-center text-white opacity-80 ' 
+          <TextLoop className='flex pb-20 text-4xl justify-center text-white opacity-80 ' 
                       interval={1000} 
                       contents={['Developer', 'Student', 'Arch User', 'Vegan']} />
 
@@ -64,8 +65,10 @@ export default function index({ data }) {
           <div className='self-center flex flex-col'>
             <Title text={`Skillset 🔧`} />
             <div className='mt-10 flex flex-row justify-between min-w-[50rem] ml-32'>
-              <div className='self-center max-w-sm' ref={aboutMeRef}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
+              <div className='self-center text-xl max-w-sm' ref={aboutMeRef}>
+                <Bold>React</Bold> is my bread and butter, only second to <Bold>Svelte</Bold>. 
+                I have some self-thought experience in <Bold>UI/UX</Bold>.
+                
               </div>
               <img className='h-[22rem]' src="img/experience_celeste.svg" />
             </div>
