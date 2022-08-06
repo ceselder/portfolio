@@ -12,7 +12,7 @@ import ContactIcon from '../components/ContactIcon'
 import TextLoop from '../components/TextLoop'
 import Bold from '../components/Bold'
 
-export default function index({ data }) {
+export default function Index({ data }) {
 
   const aboutMeRef = useRef(null);
   const scrollToAboutMe = () => aboutMeRef.current.scrollIntoView({ behavior: 'smooth' })
@@ -46,8 +46,9 @@ export default function index({ data }) {
               <img className='h-[22rem]' src="img/about_me.svg" />
               <div className='self-center text-xl max-w-[30rem]' ref={aboutMeRef}>
                 Welcome! My name is <span className='font-bold'>Celeste</span>.
-                I'm a computer science student at <span className='font-bold'>Ghent University</span>.
-                Currently obsessed with full-stack web development.
+                I&apos;m a computer science student at <span className='font-bold'>Ghent University</span>.
+                Currently obsessed with full-stack web development. 
+                Strong understanding of 
                 {/* Fluent in <span className='font-bold'>English</span> and <span className='font-bold'>Dutch</span>. */}
                 <div className='flex flex-row gap-x-4 mt-4'>
                   <Button text={'Get in touch!'} />

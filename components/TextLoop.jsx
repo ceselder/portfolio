@@ -9,7 +9,7 @@ export default function TextLoop({ className, interval, contents }) {
             setIndex(i => (i + 1) % contents.length)
         }, interval)
         return () => { clearInterval(ourInterval) }
-    }, [])
+    })
 
 
     return (
