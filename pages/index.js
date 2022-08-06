@@ -6,6 +6,9 @@ import ProjectsCarousel from '../components/ProjectsCarousel/ProjectsCarousel'
 import Title from '../components/Title'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Motion } from 'framer-motion'
+import ContactIcon from '../components/ContactIcon'
 
 export default function index({ data }) {
 
@@ -17,12 +20,15 @@ export default function index({ data }) {
       <div className='min-h-[100vh] h-full simvoni bg-extend-bg text-black pb-20'>
         <div className=' text-white bg-extend-purple flex flex-col'>
           <Navbar scrollToAboutMe={scrollToAboutMe} />
-          <h1 className='pt-20 font-bold text-7xl self-center'>
+          <h1 className='pt-10 font-bold text-7xl self-center'>
             Celeste
+          </h1>
+          <h1 className='py-4 font-bold text-4xl text-gray-300 self-center'>
+            Web Developer
           </h1>
         </div>
         <Wave fill='#501b55ff'
-          className='rotate-180 fill-slate-200'
+          className='rotate-180 fill-slate-200 '
           paused={false}
           options={{
             height: 20,
@@ -30,16 +36,16 @@ export default function index({ data }) {
             speed: 0.2,
             points: 2
           }} />
-        <div className='flex flex-col gap-y-20 justify-center'>
+        <div className='flex flex-col mt-8 gap-y-20 justify-center'>
           <div className='self-center flex flex-col'>
             <Title text="About me 👋" />
             <div className='flex flex-row justify-between min-w-[55rem]'>
-              <img className='h-96' src="img/about_me.svg" />
-              <div className='self-center text-lg max-w-md' ref={aboutMeRef}>
-                Welcome! My name is Celeste.
-                I'm a computer science student at Ghent University.
+              <img className='h-[22rem]' src="img/about_me.svg" />
+              <div className='self-center text-xl max-w-[30rem]' ref={aboutMeRef}>
+                Welcome! My name is <span className='font-bold'>Celeste</span>.
+                I'm a computer science student at <span className='font-bold'>Ghent University</span>.
                 Currently obsessed with full-stack web development.
-                Fluent in English and Dutch.
+                {/* Fluent in <span className='font-bold'>English</span> and <span className='font-bold'>Dutch</span>. */}
                 <div className='flex flex-row gap-x-4 mt-4'>
                   <Button text={'Get in touch!'} />
                   <Button text={'My resume!'} />
@@ -54,26 +60,24 @@ export default function index({ data }) {
 
 
           <div className='self-center flex flex-col'>
-            <Title text={`Skills 🔧`} />
+            <Title text={`Skillset 🔧`} />
             <div className='mt-10 flex flex-row justify-between min-w-[50rem] ml-32'>
               <div className='self-center max-w-sm' ref={aboutMeRef}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
               </div>
-              <img className='h-96' src="img/experience_celeste.svg" />
+              <img className='h-[22rem]' src="img/experience_celeste.svg" />
             </div>
           </div>
           <div className='self-center flex flex-col'>
             <Title text="Contact ✉️" />
-            <div className='mt-10 flex flex-row justify-between min-w-[50rem] mr-32'>
-              <img className='h-96' src="img/contact_2.svg" />
-              <div className='self-center max-w-sm' ref={aboutMeRef}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris ligula, pellentesque at urna sit amet, pretium bibendum erat. Nulla pharetra tincidunt libero, in tincidunt enim. Vivamus eu justo sit amet est feugiat placerat. Mauris ante justo, ornare ut iaculis ac, vestibulum at metus. Vestibulum eu auctor justo.
-                <div className='flex flex-row gap-x-4 my-2'>
-                  <FontAwesomeIcon className='w-10 h-10' icon={faGithub} />
-                  <FontAwesomeIcon className='w-10 h-10' icon={faTwitter} />
-                  <FontAwesomeIcon className='w-10 h-10' icon={faDiscord} />
-                  <FontAwesomeIcon className='w-10 h-10' icon={faTwitter} />
-                  <FontAwesomeIcon className='w-10 h-10' icon={faTwitter} />
+            <div className='flex flex-row justify-center min-w-[50rem]'>
+              <div className='self-center text-center text-xl max-w-md' ref={aboutMeRef}>
+                Want to discuss a project, a job opportunity or whatever? 
+                <br />You can contact me here.
+                <div className='justify-center flex flex-row gap-x-4 my-2'>
+                  <ContactIcon color='[#5865F2]' text='celeste#4332' icon={faDiscord} />  
+                  <ContactIcon color='black' onClick={() => window.open('https://github.com/ceselder')} text='ceselder' icon={faGithub} />  
+                  <ContactIcon color='extend-purple' onClick={() => window.open('mailto:cooletrogen@protonmail.com')} text='coolestrogen@protonmail.com' icon={faEnvelope} />           
                 </div>
               </div>
 

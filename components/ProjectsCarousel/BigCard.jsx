@@ -32,7 +32,7 @@ export default function BigCard({ project }) {
         {project.description}
       </div>
       <div className='flex flex-row justify-center self-end gap-3 m-2'>
-          {project.technologies.map(tech => <i className={`text-4xl ${iconDict[tech]} `}></i>)}
+          {project.technologies.map(tech => <i key={tech} className={`text-4xl ${iconDict[tech]} `}></i>)}
         </div>
     </div>
   )
