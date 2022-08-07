@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-export default function TextLoop({ className, interval, contents }) {
+export default function TextLoop({ delay = 0, className, interval, contents }) {
 
+    const [actualDelay, setDelay] = useState(delay)
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        const ourInterval = setInterval(() => {
-            setIndex(i => (i + 1) % contents.length)
-        }, interval)
-        return () => { clearInterval(ourInterval) }
+        let ourInterval = null
+        const ourTimeOut = setTimeout(() => {
+            ourInterval = setInterval(() => {
+                setDelay(0)
+                setIndex(i => (i + 1) % contents.length)
+            }, interval)
+        }, actualDelay)
+        return () => { clearInterval(ourInterval); clearTimeout(ourTimeOut);   }
     })
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import SmallCard from './SmallCard'
 import BigCard from './BigCard'
 import Title from '../Title'
